@@ -1,0 +1,20 @@
+{
+  "name": "bookingordernotify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql2": "^1.6.5",
+    "sequelize": "^4.42.1",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "querystring": "^0.2.0"
+  }
+}

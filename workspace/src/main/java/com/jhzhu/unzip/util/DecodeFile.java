@@ -48,9 +48,11 @@ public class DecodeFile {
         } catch (URISyntaxException e1) {
             e1.printStackTrace();
         }
+        String arch = System.getProperty("os.arch");
+        Boolean osIs32 = arch.equals("x86");
         // 兼容main方法执行和javaweb下执行
         String winrarPath = (classPath.indexOf("WEB-INF") > -1 ? classPath.substring(0, classPath.indexOf("WEB-INF")) :
-                classPath.substring(0, classPath.indexOf("classes"))) + "/WinRAR/WinRAR.exe";
+                classPath.substring(0, classPath.indexOf("classes"))) + (osIs32 ? "/WinRAR32/WinRAR.exe" : "/WinRAR/WinRAR.exe");
         winrarPath = new File(winrarPath).getAbsoluteFile().getAbsolutePath();
         System.out.println(winrarPath);
 
